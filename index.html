@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>HBD Jessica!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        overflow-x: hidden;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        position: relative;
+      }
+      .fireworks {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
+      .box {
+        position: relative;
+        z-index: 2;
+        min-width: 350px;
+        max-width: 800px;
+        border-radius: 0.25rem;
+        background-image: url("./public/images/astronaut.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+      }
+      .box .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 3;
+      }
+      .box .content {
+        position: relative;
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        text-align: center;
+      }
+      h1 {
+        font-family: "Dancing Script", cursive;
+        color: #ff0066;
+        font-size: 2.75rem;
+      }
+      img {
+        object-fit: contain;
+      }
+      p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 1.5;
+        color: white;
+      }
+      footer {
+        font-family: "Dancing Script", cursive;
+        color: #ff0066;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fireworks"></div>
+    <div class="box">
+      <div class="overlay"></div>
+      <div class="content">
+        <h1>Happy Birthday Jessica!</h1>
+        <p>
+          Hi. Bagaimana kabarmu?
+          <br /><br />
+          Kuharap kau baik-baik saja. Jagalah kesehatanmu, jangan terlalu sering
+          makan-makanan yang terlalu pedas, aku tau kau sangat menyukainya. Aku
+          hanya tak ingin perutmu sakit karenanya,
+          <br /><br />
+          Disini matahari tampak gelap, hujan berkali-kali, pelangi tak kunjung
+          datang.
+          <br /><br />
+          Sudah lama sekali aku tak melihatmu. Aku ingat kala itu, aku ingat
+          raut wajahmu, aku ingat sentuhan lembutmu, suara manjamu, senyummu,
+          tawamu, wangimu. Bahkan aku ingat saat kau berusaha menahan air matamu
+          jatuh. Sepertinya kau sangat sulit menjelaskan apa yang kau rasakan
+          pada saat itu.
+          <br /><br />
+          Senang, sedih, marah, kecewa selalu bercampur saat kita bertemu.
+          <br /><br />
+          Maafkan aku yang selalu sulit untuk berkata, melihatmu saja aku sudah
+          tidak bisa berkata-kata lagi. Maaf, aku sudah membuatmu jatuh begitu
+          dalam, Maaf, aku sudah membuang waktumu Maaf karena saat itu aku
+          memberimu batas, menyangkal perasaan, dan membuatmu mundur perlahan,
+          raguku membuat kamu pergi, egoku membiarkanmu menyerah.
+          <br /><br />
+          Terbanglah setinggi mungkin Terbanglah sebebas mungkin.
+          <br /><br />
+          Jangan buat cinta barumu ragu, dan akhirnya membuat pilihan yang
+          salah, sepertiku.
+          <br /><br />
+          Jangan menenggelamkan cinta barumu dengan pertanyaan rumitmu.
+          <br /><br />
+          Buatlah dia nyaman, dengan memberinya kepastian. Dan janganlah terlalu
+          mengekangnya. Beri dia waktu sendiri, mungkin dia juga membutuhkan
+          waktu untuk mencintai dirinya sendiri terlebih dahulu.
+          <br /><br />
+          Jangan lupa untuk selalu membuatnya tertawa, bantu dia berdiri dari
+          lubang kepedihannya. Dan jangan pernah menyerah untuk mempertahankan
+          cinta barumu.
+          <br /><br />
+          Terimakasih sudah pernah singgah Aku tak akan pernah menyesal
+          mengenalmu.
+          <br /><br />
+          Terimakasih,
+          <br /><br />
+          Terimakasih untuk semuanya.
+        </p>
+        <footer>Created with ❤️ by Evan Fawwaz</footer>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
+    <script>
+      const audio = new Audio("./public/audio/backsound.mp3");
+      audio.play();
+      const container = document.querySelector(".fireworks");
+      const fireworks = new Fireworks.default(container);
+      fireworks.start();
+    </script>
+  </body>
+</html>
